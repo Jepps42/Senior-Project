@@ -45,3 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   <CurrentState>k__BackingField: 0
+  <PreviousState>k__BackingField: 0
+  <MainMenuScene>k__BackingField:
+    asset: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+    guid: 99c9720ab356a0642a771bea13969a05
+  <GameplayScene>k__BackingField:
+    asset: {fileID: 102900000, guid: 846a71d61009fdc4fb36893acc318e7e, type: 3}
+    guid: 846a71d61009fdc4fb36893acc318e7e

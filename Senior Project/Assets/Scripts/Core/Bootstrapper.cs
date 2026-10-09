@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
 {
-    private static Bootstrapper instance;
+    private static Bootstrapper _instance;
 
     private const string BootstrapPrefabFileName = "Bootstrap";
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void AutoSpawn()
     {
-        if (instance != null) return;
+        if (_instance != null) return;
 
         GameObject prefab = Resources.Load<GameObject>(BootstrapPrefabFileName);
         Instantiate(prefab);
@@ -17,13 +17,13 @@ public class Bootstrapper : MonoBehaviour
         
     private void Awake()
     {
-        if (instance != null)
+        if (_instance != null)
         {
             Destroy(gameObject);
             return;
         }
 
-        instance = this;
+        _instance = this;
         DontDestroyOnLoad(gameObject);
     }
 }
