@@ -33,7 +33,7 @@ public class Menu : MonoBehaviour
     [field: SerializeField] public UnityEvent OnFocused { get; private set; } = new();
     [field: SerializeField] public UnityEvent OnUnfocused { get; private set; } = new();
         
-    public Menu PreviousPanel { get; private set; }
+    [field: SerializeField, ReadOnly] public Menu PreviousPanel { get; private set; }
     /// <summary>
     /// Globally accessible reference to the current active panel.
     /// </summary>
@@ -274,5 +274,13 @@ public class Menu : MonoBehaviour
         }
 
         return false;
+    }
+
+    [Button("Debug Print Menu System Info", EButtonEnableMode.Playmode)]
+    public void DebugPrintMenuSystemInfo()
+    {
+        string currentMenuString = CurrentActiveMenu == null ? "null" : CurrentActiveMenu.gameObject.name;
+        string previousMenuString = PreviousPanel == null ? "null" : PreviousPanel.gameObject.name;
+        Debug.Log($"Menu System - Current: {currentMenuString}, Previous: {previousMenuString}");
     }
 }
