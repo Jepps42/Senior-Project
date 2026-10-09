@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 053b822d8f58e2d4e977ce274eb61e6f
+timeCreated: 1515060256
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 293522
+  packageName: Animancer Pro v8
+  packageVersion: 8.4.0
+  assetPath: Packages/com.kybernetik.animancer/Runtime/Core/Nodes/ParentState.cs
+  uploadId: 938542
